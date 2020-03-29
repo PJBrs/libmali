@@ -33,6 +33,8 @@ configure_file(pkgconfig/gbm.pc.cmake gbm.pc @ONLY)
 configure_file(pkgconfig/glesv1_cm.pc.cmake glesv1_cm.pc @ONLY)
 configure_file(pkgconfig/glesv2.pc.cmake glesv2.pc @ONLY)
 
+add_library(gbm STATIC src/gbm.c)
+
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/egl.pc
               ${CMAKE_CURRENT_BINARY_DIR}/gbm.pc
               ${CMAKE_CURRENT_BINARY_DIR}/glesv1_cm.pc
